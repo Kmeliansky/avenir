@@ -1,44 +1,47 @@
-import Image from "next/image";
+import Image from "next/image"
+import SectionReveal from "@/components/SectionReveal"
 
-export default function Hero() {
+type HeroProps = {
+  title?: string
+}
+
+export default function Hero({ title = "Ferramental Rápido" }: HeroProps) {
   return (
     <section className="border-y border-zinc-700/50 bg-zinc-900 px-6 py-16 text-white md:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2 md:gap-12">
-        
-        {/* Coluna esquerda */}
-        <div>
+
+        <SectionReveal from="left">
           <h1 className="mb-6 text-4xl md:text-h1">
-            Manufatura aditiva e impressão 3D para levar seu projeto até a peça final
+            {title}
           </h1>
 
           <p className="mb-8 text-[17px] font-medium text-zinc-300">
-            Na AVENIR 3D, aplicamos manufatura aditiva e impressão 3D como solução completa, do projeto à peça final, garantindo desempenho técnico e viabilidade industrial. 
+            Fabricamos moldes, gabaritos e dispositivos com o uso da manufatura aditiva, ideais para testes e pequenas séries, sem a necessidade de usinagem.
           </p>
 
           <div className="flex flex-wrap gap-4">
             <button className="font-heading rounded-lg bg-white px-6 py-3 font-medium text-zinc-900 transition hover:bg-zinc-200">
               Orçamento rápido
             </button>
-
             <button className="font-heading rounded-lg border border-zinc-600 px-6 py-3 font-medium text-white transition hover:bg-zinc-800">
               Materiais impressos
             </button>
           </div>
-        </div>
+        </SectionReveal>
 
-        {/* Coluna direita */}
-        <div className="flex justify-center md:justify-end">
+        <SectionReveal from="right" delayMs={80}>
+          <div className="flex justify-center md:justify-end">
           <Image
-            src="/images/wireframe.png"
-            alt="Descrição da imagem"
+            src="/images/modelagem-3d/imagem-de-modelagem-3d.webp"
+            alt="Modelagem 3D"
             className="w-full max-w-md rounded-xl object-cover"
-            width={200}
-            height={80}
+            width={500}
+            height={400}
           />
-        </div>
+          </div>
+        </SectionReveal>
 
       </div>
     </section>
-    
-  );
+  )
 }

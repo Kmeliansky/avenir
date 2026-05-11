@@ -23,13 +23,13 @@ export default function About() {
           </h2>
 
           <div className="space-y-4">
-            <p className="text-zinc-300">
+            <p className="text-[17px] font-medium text-zinc-300">
               A AVENIR 3D é uma empresa brasileira especializada no desenvolvimento, prototipagem e fabricação de produtos com o uso da manufatura aditiva para entregar soluções completas e inovadoras.
             </p>
-            <p className="text-zinc-300">
+            <p className="text-[17px] font-medium text-zinc-300">
               Desde 2018, transformamos a maneira como os produtos são concebidos e fabricados, combinando engenharia, tecnologia e visão estratégica voltada à inovação. Nosso compromisso é acelerar o ciclo de desenvolvimento, reduzir custos e otimizar processos, proporcionando soluções sob medida, repensando métodos, desafiando limites e impulsionando a indústria rumo ao futuro.
             </p>
-            <p className="text-zinc-300">
+            <p className="text-[17px] font-medium text-zinc-300">
               Referência em soluções de desenvolvimento, prototipagem e fabricação de produtos utilizando a manufatura aditiva
             </p>
           </div>

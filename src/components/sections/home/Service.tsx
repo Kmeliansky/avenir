@@ -1,19 +1,20 @@
 "use client"
 
+import Link from "next/link"
 import { useState, useCallback, useLayoutEffect } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 
 const services = [
-  { title: "Desenvolvimento de Produto", desc: "Desenvolvimento e aprimoramento de produtos sob medida, do conceito ao projeto final pronto para fabricação." },
-  { title: "Digitalização", desc: "Conversão de peças físicas em modelos digitais para edição, análise ou reprodução." },
-  { title: "Modelagem 3D", desc: "Modelagem 3D em CAD para criar e ajustar peças com foco no uso final e fabricação." },
-  { title: "Engenharia Reversa", desc: "Reconstrução digital de peças e sistemas com precisão, pronta para melhoria ou fabricação." },
-  { title: "Prototipagem", desc: "Produção de protótipos funcionais ou visuais para testes e validações antes da fabricação." },
-  { title: "Lote Piloto", desc: "Produção de pequenas séries para testes de engenharia, validação e preparação para escala." },
-  { title: "Fabricação de Peças de Uso Final", desc: "Fabricação sob demanda de peças finais, de unidades a lotes, por manufatura aditiva ou híbrida." },
-  { title: "Ferramental Rápido", desc: "Fabricação de moldes, gabaritos e dispositivos para testes e pequenas séries, sem usinagem." },
-  { title: "Inventário Digital", desc: "Organização e digitalização de peças, com acervo digital para produção sob demanda." },
-  { title: "Consultoria", desc: "Suporte técnico em projetos, processos, materiais e fabricação com manufatura aditiva." },
+  { title: "Desenvolvimento de Produto", href: "/servicos/desenvolvimento-de-produto", desc: "Desenvolvimento e aprimoramento de produtos sob medida, do conceito ao projeto final pronto para fabricação." },
+  { title: "Digitalização", href: "/servicos/digitalizacao", desc: "Conversão de peças físicas em modelos digitais para edição, análise ou reprodução." },
+  { title: "Modelagem 3D", href: "/servicos/modelagem-3d", desc: "Modelagem 3D em CAD para criar e ajustar peças com foco no uso final e fabricação." },
+  { title: "Engenharia Reversa", href: "/servicos/engenharia-reversa", desc: "Reconstrução digital de peças e sistemas com precisão, pronta para melhoria ou fabricação." },
+  { title: "Prototipagem", href: "/servicos/prototipagem-3d", desc: "Produção de protótipos funcionais ou visuais para testes e validações antes da fabricação." },
+  { title: "Lote Piloto", href: "/servicos/lote-piloto", desc: "Produção de pequenas séries para testes de engenharia, validação e preparação para escala." },
+  { title: "Fabricação de Peças de Uso Final", href: "/servicos/fabricacao-de-pecas-de-uso-final", desc: "Fabricação sob demanda de peças finais, de unidades a lotes, por manufatura aditiva ou híbrida." },
+  { title: "Ferramental Rápido", href: "/servicos/ferramental-rapido", desc: "Fabricação de moldes, gabaritos e dispositivos para testes e pequenas séries, sem usinagem." },
+  { title: "Inventário Digital", href: "/servicos/inventario-digital", desc: "Organização e digitalização de peças, com acervo digital para produção sob demanda." },
+  { title: "Consultoria", href: "/servicos/consultoria", desc: "Suporte técnico em projetos, processos, materiais e fabricação com manufatura aditiva." },
 ]
 
 export default function Services() {
@@ -59,7 +60,7 @@ export default function Services() {
             O que fazemos
           </h2>
 
-          <p className="text-zinc-300">
+          <p className="text-[17px] font-medium text-zinc-300">
             Com a sinergia de tecnologias como Escaneamento e Modelagem 3D, Manufatura Aditiva, Corte a Laser, Injeção Plástica de bancada e Pintura Técnica, oferecemos soluções completas em desenvolvimento, prototipagem e fabricação de produtos.
           </p>
         </div>
@@ -74,21 +75,42 @@ export default function Services() {
                   key={index}
                   className="min-w-0 flex-[0_0_100%] px-3 sm:flex-[0_0_50%] lg:flex-[0_0_25%]"
                 >
-                  <div className="h-full rounded-xl bg-zinc-800 p-6">
-                    
-                    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-zinc-700">
-                      ⚙️
+                  <article
+                    className="relative flex h-full min-h-[390px] flex-col overflow-hidden border border-zinc-600/55 px-9 py-8 transition-colors duration-300 hover:border-zinc-400/70"
+                    style={{ clipPath: "polygon(12% 0, 100% 0, 100% 88%, 88% 100%, 0 100%, 0 15%)" }}
+                  >
+                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_74%_7%,rgba(255,255,255,0.18),transparent_36%),linear-gradient(145deg,#171717_0%,#060606_53%,#1a1a1a_100%)]" />
+                    <div className="pointer-events-none absolute -left-20 bottom-0 h-44 w-64 bg-white/10 blur-3xl" />
+                    <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0)_30%,rgba(255,255,255,0.04)_100%)]" />
+
+                    <div className="relative mb-16 h-14 w-14">
+                      <div className="absolute left-2 top-2 h-10 w-10 rounded-sm border border-zinc-500/35 bg-zinc-300/50" />
+                      <div className="absolute left-1 top-1 h-10 w-10 rounded-sm border border-zinc-500/45 bg-zinc-200/85 shadow-[0_10px_18px_rgba(0,0,0,0.45)]" />
+                      <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-sm border border-zinc-400/70 bg-zinc-100 text-zinc-900 shadow-[0_8px_16px_rgba(0,0,0,0.35)]">
+                        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                          <path d="M9 4H4v5" />
+                          <path d="M4 9l4-4" />
+                          <path d="M15 20h5v-5" />
+                          <path d="M20 15l-4 4" />
+                          <path d="M20 9V4h-5" />
+                          <path d="M15 4l5 5" />
+                          <path d="M4 15v5h5" />
+                          <path d="M9 20l-5-5" />
+                        </svg>
+                      </div>
                     </div>
 
-                    <h3 className="mb-2 text-xl font-semibold">
+                    <h3 className="relative mb-5 text-[clamp(2.2rem,1.95rem+1vw,2.85rem)] font-semibold leading-[1.02] tracking-[-0.025em] text-zinc-100">
                       {item.title}
                     </h3>
 
-                    <p className="text-zinc-300">
-                      {item.desc}
-                    </p>
-
-                  </div>
+                    <Link
+                      href={item.href}
+                      className="relative mt-auto text-[clamp(1.85rem,1.45rem+1.2vw,2.35rem)] font-heading font-medium leading-[1.04] tracking-[-0.02em] text-zinc-300 transition-colors hover:text-white"
+                    >
+                      Conheça a solução
+                    </Link>
+                  </article>
                 </div>
               ))}
             </div>

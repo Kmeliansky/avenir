@@ -33,7 +33,7 @@ export default function Challenges() {
               <h3 className="mb-2">
                 Desenvolvimento
               </h3>
-              <p className="text-zinc-300">
+              <p className="text-[17px] font-medium text-zinc-300">
                 Empresas que pulam validações geram retrabalho e atrasos.Na AVENIR 3D desenvolvemos com Manufatura Aditiva, do conceito à peça final, reduzindo custo e risco.
               </p>
             </div>
@@ -48,7 +48,7 @@ export default function Challenges() {
               <h3 className="mb-2">
                 Prototipagem
               </h3>
-              <p className="text-zinc-300">
+              <p className="text-[17px] font-medium text-zinc-300">
                 Métodos tradicionais encarecem e atrasam testes.Na AVENIR 3D criamos protótipos funcionais rápidos com Manufatura Aditiva, validando com menos custo e tempo.
               </p>
             </div>
@@ -63,7 +63,7 @@ export default function Challenges() {
               <h3 className="mb-2">
                 Fabricação de Produtos
               </h3>
-              <p className="text-zinc-300">
+              <p className="text-[17px] font-medium text-zinc-300">
                 Produções tradicionais elevam custo e prazo.Na AVENIR 3D fabricamos peças finais com Manufatura Aditiva e materiais técnicos, da definição à peça pronta.
               </p>
             </div>
